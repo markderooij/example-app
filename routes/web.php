@@ -4,8 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
 Route::get('/hello', function () {
-    return view('welcome');
+    return ['Mars', 'Jupiter', 'Venus', 'Uranus', 'Earth'];
 });
+
+Route::post('/hello', [UserController::class]);
 
 Route::get('/users', [UserController::class, 'index']);
 
@@ -33,7 +35,9 @@ Route::get('planets', function () {
     
 });
 
-/*Route::get('/', function () {
+
+/* opdracht 2: .. 
+Route::get('/', function () {
     $planets = [
         [
             'name' => 'Mars',
