@@ -7,7 +7,7 @@ Route::get('/hello', function () {
     return ['Mars', 'Jupiter', 'Venus', 'Uranus', 'Earth'];
 });
 
-Route::post('/hello', [UserController::class]);
+Route::post('/hallo', [UserController::class]);
 
 Route::get('/users', [UserController::class, 'index']);
 
